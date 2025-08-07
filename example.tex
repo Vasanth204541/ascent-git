@@ -1,1 +1,28 @@
-hello this is ascent 111
+hello this is ascent 1
+
+
+Install OpenSSH Server manually via PowerShell
+
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+Start-Service sshd
+Set-Service -Name sshd -StartupType 'Automatic'
+netstat -an | findstr 22
+
+------------------------------------
+       To compress:file-zib
+tar -czvf logs.tar.gz /var/log
+------------------------------------
+         Solution Checklist:
+ipconfig
+Get-Service -Name sshd
+If not installed, install using:
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+New-NetFirewallRule -Name sshd -DisplayName "OpenSSH Port 22" -Protocol TCP -LocalPort 22 -Direction Inbound -Action Allow
+
+------------------------------------------------------------------------------------------
+Linux;
+scp /home/vasanth/vasanth.tar.gz vasanth@192.168.0.84:/C:/Users/vasanth/Desktop/
+
+
+httpshttp://192.168.0.102:9000/://192.168.0.18:8443/
+		https://192.168.0.102:9000/
